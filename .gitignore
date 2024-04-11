@@ -7,5 +7,6 @@
 # git commit -m "First Commit"
 # git push -u origin main
 
-EMT.html
 /public/styles
+EMT.html
+Template.html
