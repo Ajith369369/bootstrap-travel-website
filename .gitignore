@@ -7,6 +7,18 @@
 # git commit -m "First Commit"
 # git push -u origin main
 
-/public/styles
+# /public/styles
+book-with-us-style.css
+exclusive-offers-style.css
+famous-tourist-attraction-style.css
+footer-style.css
+header-style.css
+refund-style.css
+search-flights-hotels-bus-style.css
+search-style.css
+top-flight-routes-style.css
+travel-blogs-style.css
 EMT.html
 Template.html
+Test_1.html
+Test_2.html

@@ -1,0 +1,150 @@
+._actvrmenu {
+  background: #E2F2FF;
+    border-radius: 5px;
+    border-top: 1px solid #E6E8E9;
+    border: 0;
+    color: #202020;
+    display: flex;
+    float: left;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 14px;
+    font-weight: 500;
+    list-style: none;
+    margin: 0 2px;
+    outline: 0;
+    padding: 6px 10px;
+    position: relative;
+    text-decoration: none  !important;
+    width: 100%;
+align-items: center;
+border-bottom: 1px solid #E6E8E9;
+}
+
+.meuicowidth.flightmenuico {
+    background-repeat: no-repeat !important;
+    background: url(../images/flight.png);
+    background-size: contain;
+    height: 40px;
+    margin-right: 6px;
+    margin: auto;
+    min-width: 30px;
+    width: 40px;
+}
+
+.meuicowidth.hotelmenuico {
+    background-repeat: no-repeat !important;
+    background: url(../images/hotel.png);
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    margin-right: 6px;
+    margin: auto;
+    min-width: 30px;
+}
+
+.meuicowidth.fphmenuico {
+  background: url(../images/flight_hotel.png);
+  background-repeat: no-repeat !important;
+  background-size: contain;
+  color: #202020;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  list-style: none;
+  margin: auto;
+  margin-right: 6px;
+  min-width: 30px;
+  width: 40px;
+}
+
+.meuicowidth.trainmenuico {
+  background: url(../images/trains.png);
+  background-repeat: no-repeat !important;
+  background-size: contain;
+  color: #202020;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  list-style: none;
+  margin: auto;
+  margin-right: 6px;
+  min-width: 30px;
+  width: 40px;
+}
+
+.meuicowidth.busmenuico {
+  background: url(../images/bus.png);
+  background-repeat: no-repeat !important;
+  background-size: contain;
+  color: #202020;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  list-style: none;
+  margin: auto;
+  margin-right: 6px;
+  min-width: 30px;
+  width: 40px;
+}
+
+.meuicowidth.holidaymenuico {
+  background: url(../images/holidays.png);
+  background-repeat: no-repeat !important;
+  background-size: contain;
+  color: #202020;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  list-style: none;
+  margin: auto;
+  margin-right: 6px;
+  min-width: 30px;
+  width: 40px;
+}
+
+.meuicowidth.cabmenuico {
+  background: url(../images/cab.png);
+  background-repeat: no-repeat !important;
+  background-size: contain;
+  color: #202020;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  list-style: none;
+  margin: auto;
+  margin-right: 6px;
+  min-width: 30px;
+  width: 40px;
+}
+
+.meuicowidth.actvitymenuico {
+  background: url(../images/activities.png);
+  background-repeat: no-repeat !important;
+  background-size: contain;
+  color: #202020;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  list-style: none;
+  margin: auto;
+  margin-right: 6px;
+  min-width: 30px;
+  width: 40px;
+}
+
+.meuicowidth.moremenuico {
+  background: url(../images/more.png);
+  background-repeat: no-repeat !important;
+  background-size: contain;
+  color: #202020;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  list-style: none;
+  margin: auto;
+  margin-right: 6px;
+  min-width: 30px;
+  width: 40px;
+}
+
