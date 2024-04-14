@@ -206,3 +206,30 @@
 .card-title > i {
   font-size: 18px;
 }
+
+/* FAMOUS TOURIST ATTRACTION */
+
+#fam-tour-attra > div:nth-child(2) > div.col-10 > div {
+height: auto;
+flex-flow: row wrap;
+}
+
+#fam-tour-attra > div:nth-child(2) > div.col-10 > div > div {
+height: 140px;
+width: 180px;
+}
+
+
+#fam-tour-attra > div:nth-child(2) > div.col-10 > div > div > img {
+height: 80px;
+object-fit: contain;
+}
+
+#fam-tour-attra > div:nth-child(2) > div.col-10 > div > div > div {
+width: 100%;
+}
+
+
+
+
+
