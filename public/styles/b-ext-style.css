@@ -159,3 +159,50 @@
   height: 400px;
   object-fit: contain;
 }
+
+/* TOP FLIGHT ROUTES */
+
+#top-flight-routes > div.row.p-4 > div.col-10 {
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.card.m-3 {
+  width: 320px;
+  height: auto;
+}
+
+.row.g-0 {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  width: 320px;
+}
+
+#top-flight-routes > div.row.p-4 > div.col-10 > div > div > div:nth-child(1) {
+  width: 80px;
+}
+
+.row.g-0 img {
+  width: 100%;
+}
+
+.row.g-0 div:nth-child(2) {
+  width: 240px;
+}
+
+.card-body {
+  width: 240px;
+  /* flex: 1 1 auto; */
+}
+
+.card-title {
+  font-size: 16px;
+}
+
+.card-title > i {
+  font-size: 18px;
+}
