@@ -326,3 +326,19 @@
 #travel-vlogs > div.row.d-flex.justify-content-center.my-4 > a {
   width: 150px;
 }
+
+/* WHY BOOK WITH US */
+
+#book-with-us > div:nth-child(2) > div.col-10 > div > div > div {
+  width: 260px;
+}
+
+#book-with-us > div:nth-child(2) > div.col-10 > div > div > div > img {
+height: 80px;
+}
+
+#book-with-us > div:nth-child(2) > div.col-10 > div > div > div > div {
+  width: 100%;
+}
+
+
