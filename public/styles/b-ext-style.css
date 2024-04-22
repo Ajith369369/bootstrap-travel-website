@@ -152,6 +152,53 @@ body {
   width: 40px;
 }
 
+#header > div:nth-child(2) {
+height: 300px;
+background-color: rgb(47, 129, 237);
+}
+
+#header > div:nth-child(2) > div {
+background-color: white;
+width: 70%;
+}
+
+#header > div:nth-child(2) > div > div:nth-child(1), #header > div:nth-child(2) > div > div:nth-child(2) {
+width: 300px;
+flex-grow: 2;
+}
+
+#header > div:nth-child(2) > div > div:nth-child(3), #header > div:nth-child(2) > div > div:nth-child(4), #header > div:nth-child(2) > div > div:nth-child(5), #header > div:nth-child(2) > div > div:nth-child(6) {
+  width: 125px;
+flex-grow: 1;
+}
+
+#header > div:nth-child(2) > div > div {
+padding: 10px;
+}
+
+#header > div:nth-child(2) > div > div.d-flex.flex-column.justify-content-center.align-items-center {
+  flex-grow: 1;
+  height: calc(100% - 20px);
+}
+
+
+
+
+
+
+#header > div:nth-child(2) > div > div:nth-child(6) > button {
+/* padding-top: 100%;
+padding-bottom: 100%; */
+}
+
+
+
+
+
+
+
+
+
 /* EXCLUSIVE OFFERS */
 .carousel {
   display: none; /* Hide all carousels by default */
