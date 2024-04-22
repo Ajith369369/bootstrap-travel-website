@@ -229,7 +229,14 @@ padding: 10px;
   /* width: 100%; */
   flex-grow: 1;
   background-color: rgba(224, 107, 11, 0.822);
+  font-weight: 700;
 }
+
+#header > div.row.d-flex.justify-content-center.align-items-center.my-4 > div > div p {
+font-weight: 700;
+}
+
+
 
 /* EXCLUSIVE OFFERS */
 .carousel {
