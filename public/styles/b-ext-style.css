@@ -261,6 +261,11 @@ font-weight: 700;
   width: 200px;
 }
 
+#exc-offers > div.row.pb-4 > div.col-md-8.col-sm-12.d-flex.flex-wrap.justify-content-center.align-items-center > a {
+width: 110px;
+margin: 5px;
+}
+
 /* TOP FLIGHT ROUTES */
 
 #top-flight-routes > div.row.p-4 > div.col-10 {
@@ -663,13 +668,17 @@ body
 body
   > footer
   > div.row.mt-4
-  > div.col-xl-7.col-lg-7.col-md-7.col-sm-12.col-12.ms-5
-  > p {
+  > div.col-xl-7.col-lg-7.col-md-7.col-sm-12.col-12
+  > div > p {
   text-align: justify;
 }
 
+.ndert {
+  flex: 2;
+}
+
 body > footer > div:nth-child(3) > div > div.ndertimhgt {
-  width: 42%;
+  flex: 1;
   margin-left: auto;
   padding: 0 20px;
 }

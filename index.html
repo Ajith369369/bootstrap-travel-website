@@ -1,34 +1,2922 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Book Flights, Hotels, Holidays, Bus & Train Tickets - EaseMyTrip.com
+    </title>
 
-  <!-- Bootstrap CDN -->
-  <link
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-  rel="stylesheet"
-  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-  crossorigin="anonymous"
-/>
+    <!-- Add Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./public/images/EaseMyTrip.svg"
+    />
 
-<!-- Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
-<!-- My CSS -->
-<link rel="stylesheet" href="./public/styles/b-ext-style.css" />
-</head>
-<body>
-  
+    <!-- Bootstrap Datepicker CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+    />
 
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
+    <!-- My CSS -->
+    <link rel="stylesheet" href="./public/styles/b-ext-style.css" />
+  </head>
+  <body>
+    <section id="header">
+      <div class="row d-flex justify-content-evenly align-items-center my-4">
+        <a href="#"
+          ><img id="logo" src="./public/images/emt_logo.svg" alt=""
+        /></a>
+        <ul class="nav d-flex justify-content-center align-items-center">
+          <li class="nav-item">
+            <a
+              href="https://www.easemytrip.com/flights.html"
+              class="_actvrmenu d-flex justify-content-center align-items-center"
+            >
+              <span class="meuicowidth flightmenuico"></span
+              ><span>Flights</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="https://www.easemytrip.com/hotels/"
+              class="_actvrmenu d-flex justify-content-center align-items-center"
+            >
+              <span class="meuicowidth hotelmenuico"></span><span>Hotels</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="https://fph.easemytrip.com/"
+              class="_actvrmenu d-flex justify-content-center align-items-center"
+            >
+              <span class="meuicowidth fphmenuico"></span
+              ><span>Flight + Hotel</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="https://www.easemytrip.com/railways/"
+              class="_actvrmenu d-flex justify-content-center align-items-center"
+            >
+              <span class="meuicowidth trainmenuico"></span><span>Trains</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="https://www.easemytrip.com/bus/"
+              class="_actvrmenu d-flex justify-content-center align-items-center"
+            >
+              <span class="meuicowidth busmenuico"></span><span>Bus</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="https://www.easemytrip.com/holidays/"
+              class="_actvrmenu d-flex justify-content-center align-items-center"
+            >
+              <span class="meuicowidth holidaymenuico"></span
+              ><span>Holidays</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="https://www.easemytrip.com/cabs/"
+              class="_actvrmenu d-flex justify-content-center align-items-center"
+            >
+              <span class="meuicowidth cabmenuico"></span><span>Cabs</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="https://www.easemytrip.com/activities/"
+              class="_actvrmenu d-flex justify-content-center align-items-center"
+            >
+              <span class="meuicowidth actvitymenuico"></span
+              ><span>Activities</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="row d-flex justify-content-center align-items-center my-4">
+        <div class="d-flex flex-wrap">
+          <div>
+            <p>FROM</p>
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle w-100"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Delhi
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Bengaluru</a></li>
+                <li><a class="dropdown-item" href="#">Mumbai</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Kolkata</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Goa</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Hyderabad</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Chennai</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Singapore</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Dubai</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Bangkok</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Kathmandu</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <p>TO</p>
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle w-100"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Mumbai
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Delhi</a></li>
+                <li><a class="dropdown-item" href="#">Bengaluru</a></li>
 
-  <!-- Bootstrap JS -->
-  <script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-  crossorigin="anonymous"
-></script>
-</body>
+                <li>
+                  <a class="dropdown-item" href="#">Kolkata</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Goa</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Hyderabad</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Chennai</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Singapore</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Dubai</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Bangkok</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Kathmandu</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="datepickerParent1">
+            <p>DEPARTURE DATE</p>
+            <input class="w-100" type="text" id="datepicker1" readonly />
+          </div>
+          <div id="datepickerParent2">
+            <p>RETURN DATE</p>
+            <input class="w-100" type="text" id="datepicker2" readonly />
+          </div>
+          <div>
+            <p>TRAVELLERS</p>
+            <input class="w-100" type="text" />
+          </div>
+          <div>
+            <button type="button" class="btn btn-primary btn-block rounded-0">
+              SEARCH
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="exc-offers">
+      <div class="row my-4">
+        <h1 class="text-center">Exclusive Offers</h1>
+      </div>
+      <div class="row pb-4">
+        <div class="col-md-2 col-sm-0"></div>
+        <div
+          class="col-md-8 col-sm-12 d-flex flex-wrap justify-content-center align-items-center"
+        >
+          <a
+            href="#"
+            class="btn btn-primary rounded-pill mx-4 active"
+            aria-current="page"
+            onclick="showCarousel(1, event)"
+            >Best Offers</a
+          >
+          <a
+            href="#"
+            class="btn btn-primary rounded-pill mx-4"
+            onclick="showCarousel(2, event)"
+            >Flight</a
+          >
+          <a
+            href="#"
+            class="btn btn-primary rounded-pill mx-4"
+            onclick="showCarousel(3, event)"
+            >Hotel</a
+          >
+          <a
+            href="#"
+            class="btn btn-primary rounded-pill mx-4"
+            onclick="showCarousel(4, event)"
+            >Bus</a
+          >
+          <!-- <a href="#" class="btn btn-primary rounded-pill mx-4">Holidays</a> -->
+          <a
+            href="#"
+            class="btn btn-primary rounded-pill mx-4"
+            onclick="showCarousel(5, event)"
+            >Cabs</a
+          >
+        </div>
+        <div class="col-md-2 col-sm-0"></div>
+      </div>
+      <div class="row px-4">
+        <div id="carousel1" class="carousel active-carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carousel1"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel1"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel1"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel1"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel1"
+              data-bs-slide-to="4"
+              aria-label="Slide 5"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel1"
+              data-bs-slide-to="5"
+              aria-label="Slide 6"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel1"
+              data-bs-slide-to="6"
+              aria-label="Slide 7"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel1"
+              data-bs-slide-to="7"
+              aria-label="Slide 8"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel1"
+              data-bs-slide-to="8"
+              aria-label="Slide 9"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./public/images/carousel_1 (1).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./public/images/carousel_1 (2).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./public/images/carousel_1 (3).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./public/images/carousel_1 (4).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./public/images/carousel_1 (5).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./public/images/carousel_1 (6).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./public/images/carousel_1 (7).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./public/images/carousel_1 (8).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./public/images/carousel_1 (9).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carousel1"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carousel1"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <div id="carousel2" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carousel2"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel2"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel2"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel2"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel2"
+              data-bs-slide-to="4"
+              aria-label="Slide 5"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel2"
+              data-bs-slide-to="5"
+              aria-label="Slide 6"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./public/images/carousel_2 (1).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./public/images/carousel_2 (2).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./public/images/carousel_2 (3).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./public/images/carousel_2 (4).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./public/images/carousel_2 (5).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./public/images/carousel_2 (6).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carousel2"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carousel2"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <div id="carousel3" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carousel3"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel3"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel3"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel3"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel3"
+              data-bs-slide-to="4"
+              aria-label="Slide 5"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./public/images/carousel_3 (1).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./public/images/carousel_3 (2).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./public/images/carousel_3 (3).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./public/images/carousel_3 (4).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./public/images/carousel_3 (5).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carousel3"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carousel3"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <div id="carousel4" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carousel4"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel4"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel4"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./public/images/carousel_4 (1).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./public/images/carousel_4 (2).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./public/images/carousel_4 (3).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carousel4"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carousel4"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <div id="carousel5" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carousel5"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel5"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel5"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel5"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./public/images/carousel_5 (1).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./public/images/carousel_5 (2).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./public/images/carousel_5 (3).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./public/images/carousel_5 (4).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carousel5"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carousel5"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="row p-4 d-flex justify-content-center align-items-center">
+        <a
+          href="https://www.easemytrip.com/deals.html"
+          class="btn btn-primary rounded-pill mx-4"
+          >View All Offers</a
+        >
+      </div>
+    </section>
+    <section id="top-flight-routes">
+      <div class="row my-4">
+        <h1 class="text-center">Top Flight Routes</h1>
+      </div>
+      <div class="row p-4">
+        <div class="col-1"></div>
+        <div class="col-10">
+          <div class="card m-3" style="max-width: 540px">
+            <div class="row g-0">
+              <div>
+                <img
+                  src="./public/images/mumbai-img.png"
+                  class="img-fluid rounded-start rounded-end"
+                  alt="..."
+                />
+              </div>
+              <div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Chennai <i class="fa-solid fa-plane"></i> Mumbai
+                  </h5>
+                  <p class="card-text text-primary fs-sm fw-bold">MAA-BOM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card m-3" style="max-width: 540px">
+            <div class="row g-0">
+              <div>
+                <img
+                  src="./public/images/ahmedabad-img.png"
+                  class="img-fluid rounded-start rounded-end"
+                  alt="..."
+                />
+              </div>
+              <div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Delhi <i class="fa-solid fa-plane"></i> Ahmedabad
+                  </h5>
+                  <p class="card-text text-primary fs-sm fw-bold">DEL-AMD</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card m-3" style="max-width: 540px">
+            <div class="row g-0">
+              <div>
+                <img
+                  src="./public/images/lucknow-img.png"
+                  class="img-fluid rounded-start rounded-end"
+                  alt="..."
+                />
+              </div>
+              <div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Delhi <i class="fa-solid fa-plane"></i> Lucknow
+                  </h5>
+                  <p class="card-text text-primary fs-sm fw-bold">DEL-LKO</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card m-3" style="max-width: 540px">
+            <div class="row g-0">
+              <div>
+                <img
+                  src="./public/images/chennai-img.png"
+                  class="img-fluid rounded-start rounded-end"
+                  alt="..."
+                />
+              </div>
+              <div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Mumbai <i class="fa-solid fa-plane"></i> Chennai
+                  </h5>
+                  <p class="card-text text-primary fs-sm fw-bold">BOM-MAA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card m-3" style="max-width: 540px">
+            <div class="row g-0">
+              <div>
+                <img
+                  src="./public/images/dubai-img.png"
+                  class="img-fluid rounded-start rounded-end"
+                  alt="..."
+                />
+              </div>
+              <div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Mumbai <i class="fa-solid fa-plane"></i> Dubai
+                  </h5>
+                  <p class="card-text text-primary fs-sm fw-bold">BOM-DXB</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card m-3" style="max-width: 540px">
+            <div class="row g-0">
+              <div>
+                <img
+                  src="./public/images/kolkata-img.png"
+                  class="img-fluid rounded-start rounded-end"
+                  alt="..."
+                />
+              </div>
+              <div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Mumbai <i class="fa-solid fa-plane"></i> Kolkata
+                  </h5>
+                  <p class="card-text text-primary fs-sm fw-bold">BOM-CCU</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card m-3" style="max-width: 540px">
+            <div class="row g-0">
+              <div>
+                <img
+                  src="./public/images/bangalore-img.png"
+                  class="img-fluid rounded-start rounded-end"
+                  alt="..."
+                />
+              </div>
+              <div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Hyderabad <i class="fa-solid fa-plane"></i> Bengaluru
+                  </h5>
+                  <p class="card-text text-primary fs-sm fw-bold">HYD-BLR</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card m-3" style="max-width: 540px">
+            <div class="row g-0">
+              <div>
+                <img
+                  src="./public/images/jaipur-img.png"
+                  class="img-fluid rounded-start rounded-end"
+                  alt="..."
+                />
+              </div>
+              <div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Mumbai <i class="fa-solid fa-plane"></i> Jaipur
+                  </h5>
+                  <p class="card-text text-primary fs-sm fw-bold">BOM-JAI</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card m-3" style="max-width: 540px">
+            <div class="row g-0">
+              <div>
+                <img
+                  src="./public/images/dubai-img.png"
+                  class="img-fluid rounded-start rounded-end"
+                  alt="..."
+                />
+              </div>
+              <div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Delhi <i class="fa-solid fa-plane"></i> Dubai
+                  </h5>
+                  <p class="card-text text-primary fs-sm fw-bold">DEL-DXB</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1"></div>
+      </div>
+    </section>
+    <section id="fam-tour-attra">
+      <div class="row my-4">
+        <h1 class="text-center">Famous Tourist Attraction</h1>
+      </div>
+      <div class="row mb-4">
+        <div class="col-1"></div>
+        <div class="col-10">
+          <div class="d-flex justify-content-evenly align-items-start">
+            <div class="card m-3">
+              <img
+                src="./public/images/lakshadweep.svg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center">Lakshadweep</h5>
+              </div>
+            </div>
+            <div class="card m-3">
+              <img
+                src="./public/images/andaman.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center">Andaman</h5>
+              </div>
+            </div>
+            <div class="card m-3">
+              <img
+                src="./public/images/kashmir.svg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center">Kashmir</h5>
+              </div>
+            </div>
+            <div class="card m-3">
+              <img
+                src="./public/images/jaipur.svg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center">Jaipur</h5>
+              </div>
+            </div>
+            <div class="card m-3">
+              <img
+                src="./public/images/bangalore.svg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center">Bengaluru</h5>
+              </div>
+            </div>
+            <div class="card m-3">
+              <img
+                src="./public/images/paris.svg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center">Paris</h5>
+              </div>
+            </div>
+            <div class="card m-3">
+              <img
+                src="./public/images/leh.svg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center">Leh</h5>
+              </div>
+            </div>
+            <div class="card m-3">
+              <img
+                src="./public/images/bali-indonesia.svg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center">Bali</h5>
+              </div>
+            </div>
+            <div class="card m-3">
+              <img
+                src="./public/images/dubai.svg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center">Dubai</h5>
+              </div>
+            </div>
+            <div class="card m-3">
+              <img
+                src="./public/images/kerala.svg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center">Kerala</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1"></div>
+      </div>
+    </section>
+    <section id="travel-vlogs">
+      <div class="row my-4">
+        <h1 class="text-center">Enjoy Fresh Travel Blogs</h1>
+      </div>
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+          <div class="d-flex justify-content-evenly align-items-center">
+            <div class="card text-bg-dark m-2">
+              <div class="dark-overlay"></div>
+              <img
+                src="./public/images/hindu-new-year-2024-hp.webp"
+                class="card-img"
+                alt="..."
+              />
+              <div class="card-img-overlay">
+                <a
+                  href="#"
+                  class="btn btn-primary rounded-pill active mb-5"
+                  aria-current="page"
+                  >Holiday Destinations</a
+                >
+                <div>
+                  <h5 class="card-title fw-bold">
+                    Embracing Sacred Vibes With Hindu New Year 2024
+                  </h5>
+                  <div>
+                    <div class="card-text mb-1">
+                      <small>Read More...</small>
+                      <div class="_blr_url"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card text-bg-dark m-2">
+              <div class="dark-overlay"></div>
+              <img
+                src="./public/images/seamless-online-cab-booking-hp.webp"
+                class="card-img"
+                alt="..."
+              />
+              <div class="card-img-overlay">
+                <a
+                  href="#"
+                  class="btn btn-primary rounded-pill active mb-5"
+                  aria-current="page"
+                  >Holiday Destinations</a
+                >
+                <div>
+                  <h5 class="card-title fw-bold">
+                    Navigate Any City Like A Local: Insider Tips For Seamless
+                    Cab Booking
+                  </h5>
+                  <div>
+                    <div class="card-text mb-1">
+                      <small>Read More...</small>
+                      <div class="_blr_url"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card text-bg-dark m-2">
+              <div class="dark-overlay"></div>
+              <img
+                src="./public/images/post-holi-long-weekend-hp.webp"
+                class="card-img"
+                alt="..."
+              />
+              <div class="card-img-overlay">
+                <a
+                  href="#"
+                  class="btn btn-primary rounded-pill active mb-5"
+                  aria-current="page"
+                  >Holiday Destinations</a
+                >
+                <div>
+                  <h5 class="card-title fw-bold">
+                    Post-Holi Bliss: Top 7 Destinations for a Serene Long
+                    Weekend
+                  </h5>
+                  <div>
+                    <div class="card-text mb-1">
+                      <small>Read More...</small>
+                      <div class="_blr_url"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card text-bg-dark m-2">
+              <div class="dark-overlay"></div>
+              <img
+                src="./public/images/places-to-visit-in-march-hp.webp"
+                class="card-img"
+                alt="..."
+              />
+              <div class="card-img-overlay">
+                <a
+                  href="#"
+                  class="btn btn-primary rounded-pill active mb-5"
+                  aria-current="page"
+                  >Holiday Destinations</a
+                >
+                <div>
+                  <h5 class="card-title fw-bold">
+                    Discovering The Best Places To Visit In March With Family
+                  </h5>
+                  <div>
+                    <div class="card-text mb-1">
+                      <small>Read More...</small>
+                      <div class="_blr_url"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1"></div>
+      </div>
+      <div class="row d-flex justify-content-center my-4">
+        <a
+          href="#"
+          class="btn btn-primary rounded-pill active mb-5"
+          aria-current="page"
+          >View All</a
+        >
+      </div>
+    </section>
+    <section id="book-with-us">
+      <div class="row my-4">
+        <h1 class="text-center">Why book with us?</h1>
+      </div>
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+          <div class="row d-flex justify-content-evenly align-items-center">
+            <div
+              class="col-md-3 col-sm-12 mb-4 d-flex justify-content-center align-items-start"
+            >
+              <div class="card">
+                <img
+                  src="./public/images/easy-booking.svg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-center fw-bold fs-5">
+                    Easy Booking
+                  </h5>
+                  <p class="card-text">
+                    We offer easy and convenient flight bookings with attractive
+                    offers.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md-3 col-sm-12 mb-4 d-flex justify-content-center align-items-start"
+            >
+              <div class="card">
+                <img
+                  src="./public/images/lowest-booking.svg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-center fw-bold fs-5">
+                    Lowest Price
+                  </h5>
+                  <p class="card-text">
+                    We ensure low rates on hotel reservation, holiday packages
+                    and on flight tickets.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md-3 col-sm-12 mb-4 d-flex justify-content-center align-items-start"
+            >
+              <div class="card">
+                <img
+                  src="./public/images/exc-deal.svg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-center fw-bold fs-5">
+                    Exciting Deals
+                  </h5>
+                  <p class="card-text">
+                    Enjoy exciting deals on flights, hotels, buses, car rental
+                    and tour packages.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md-3 col-sm-12 mb-4 d-flex justify-content-center align-items-start"
+            >
+              <div class="card">
+                <img
+                  src="./public/images/support.svg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-center fw-bold fs-5">
+                    24/7 Support
+                  </h5>
+                  <p class="card-text">
+                    Get assistance 24/7 on any kind of travel related query. We
+                    are happy to assist you.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1"></div>
+      </div>
+      <div class="row"></div>
+    </section>
+    <section id="flights-hotels-bus">
+      <div class="row my-4">
+        <h1 class="text-center">
+          Search Flights, Hotels, Bus and Holiday Packages
+        </h1>
+      </div>
+      <div class="row m-5">
+        <p>
+          EaseMyTrip is one of the largest online travel platforms in India, and
+          a trusted name in the Indian travel industry. We offer "end to end"
+          travel solutions including air tickets, hotel booking, cab and bus
+          booking, train tickets and holiday packages. Additionally, we offer
+          ancillary value-added services.
+        </p>
+        <p>
+          We understand that planning a trip can be overwhelming, so we have
+          simplified the process to make it easy for you to find the perfect
+          travel deals that suit your needs. Our website is user-friendly and
+          provides a wide range of options to choose from. Whether you're
+          planning a family vacation, a solo adventure, or a business trip, we
+          have you covered with our comprehensive travel packages. From flights
+          to hotels, car rentals to holiday packages, we offer everything you
+          need to make your trip a success.
+        </p>
+        <p>
+          We believe in transparency and honesty in all our dealings. We do not
+          charge any hidden fees, and our prices are always competitive. With
+          EaseMyTrip, you can be assured of getting the best travel deals in the
+          market. If you're looking for a hassle-free and affordable way to plan
+          your next trip, look no further than EaseMyTrip. We promise to make
+          your travel experience a memorable one.
+        </p>
+      </div>
+    </section>
+    <footer>
+      <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
+          <div class="list-group mt-3 mx-3" id="list-tab" role="tablist">
+            <button
+              class="list-group-item list-group-item-action active"
+              id="list-our-offerings-list"
+              data-bs-toggle="list"
+              href="#list-our-offerings"
+              role="tab"
+              aria-controls="our-offerings"
+            >
+              OUR OFFERINGS
+            </button>
+            <button
+              class="list-group-item list-group-item-action"
+              id="list-quick-links-list"
+              data-bs-toggle="list"
+              href="#list-quick-links"
+              role="tab"
+              aria-controls="quick-links"
+            >
+              QUICK LINKS
+            </button>
+            <button
+              class="list-group-item list-group-item-action"
+              id="list-pop-dest-list"
+              data-bs-toggle="list"
+              href="#list-pop-dest"
+              role="tab"
+              aria-controls="pop-dest"
+            >
+              POPULAR DESTINATION
+            </button>
+            <button
+              class="list-group-item list-group-item-action"
+              id="list-int-dest-list"
+              data-bs-toggle="list"
+              href="#list-int-dest"
+              role="tab"
+              aria-controls="int-dest"
+            >
+              INTERNATIONAL DESTINATION
+            </button>
+            <button
+              class="list-group-item list-group-item-action"
+              id="list-pop-air-list"
+              data-bs-toggle="list"
+              href="#list-pop-air"
+              role="tab"
+              aria-controls="pop-air"
+            >
+              POPULAR AIRLINE
+            </button>
+            <button
+              class="list-group-item list-group-item-action"
+              id="list-connect-with-list"
+              data-bs-toggle="list"
+              href="#list-connect-with"
+              role="tab"
+              aria-controls="connect-with"
+            >
+              CONNECT WITH US
+            </button>
+            <button
+              class="list-group-item list-group-item-action"
+              id="list-offers-list"
+              data-bs-toggle="list"
+              href="#list-offers"
+              role="tab"
+              aria-controls="offers"
+            >
+              OFFERS
+            </button>
+            <button
+              class="list-group-item list-group-item-action"
+              id="list-emt-list"
+              data-bs-toggle="list"
+              href="#list-emt"
+              role="tab"
+              aria-controls="emt"
+            >
+              EMT INSIGHTS
+            </button>
+            <button
+              class="list-group-item list-group-item-action"
+              id="list-media-list"
+              data-bs-toggle="list"
+              href="#list-media"
+              role="tab"
+              aria-controls="media"
+            >
+              MEDIA
+            </button>
+            <button
+              class="list-group-item list-group-item-action"
+              id="list-investors-list"
+              data-bs-toggle="list"
+              onclick="openInvestorPage()"
+              role="tab"
+              aria-controls="investors"
+            >
+              INVESTORS RELATION
+            </button>
+            <button
+              class="list-group-item list-group-item-action"
+              id="list-current-list"
+              data-bs-toggle="list"
+              onclick="openCurrentPage()"
+              role="tab"
+              aria-controls="current"
+            >
+              CURRENT OPENINGS
+            </button>
+          </div>
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-12">
+          <div class="row me-2">
+            <div class="tab-content" id="nav-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="list-our-offerings"
+                role="tabpanel"
+                aria-labelledby="list-our-offerings-list"
+              >
+                <div class="row mt-4">
+                  <h5>
+                    Make your travel easy with a wide range of products and
+                    services.
+                  </h5>
+                </div>
+                <div class="row mt-3">
+                  <ul
+                    class="d-flex flex-wrap justify-content-start align-items-center"
+                  >
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/"
+                        target="_blank"
+                        >Flights</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/hotels/"
+                        target="_blank"
+                        >Hotels</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/railways"
+                        target="_blank"
+                        >Trains</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/"
+                        target="_blank"
+                        >Holidays</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.easemytrip.com/bus/" target="_blank"
+                        >Bus</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.easemytrip.com/cabs/" target="_blank"
+                        >Cabs</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/cruise-packages.html"
+                        target="_blank"
+                        >Cruise</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/charters/flight.html"
+                        target="_blank"
+                      >
+                        Charters</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flight-status"
+                        target="_blank"
+                        >Flight Status</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/directory/airlines.html"
+                        target="_blank"
+                        >Airlines</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/directory/airports-in-india.html"
+                        target="_blank"
+                        >Airports</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/travel-guides.html"
+                        target="_blank"
+                        >Travel Guides</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/railways/pnr-status/"
+                        target="_blank"
+                        >Check PNR Status</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/JoinEMTPro"
+                        target="_blank"
+                        >EMT PRO</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/activities/"
+                        target="_blank"
+                        >Activities</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/travel-updates.html"
+                        target="_blank"
+                        >Travel Updates</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/corporate"
+                        target="_blank"
+                        >Corporate Travel</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.easemytrip.com/blog" target="_blank"
+                        >Blog</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/web-checkin.html"
+                        target="_blank"
+                        >Flight Check-in</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="list-quick-links"
+                role="tabpanel"
+                aria-labelledby="list-quick-links-list"
+              >
+                <div class="row mt-4">
+                  <h5>Quick solutions for all your travel needs.</h5>
+                </div>
+                <div class="row mt-3">
+                  <ul
+                    class="d-flex flex-wrap justify-content-start align-items-center"
+                  >
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/directory/flights.html"
+                        target="_blank"
+                        >Flight by City</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/airfare-calender"
+                        target="_blank"
+                        >Lowest Airfare Calendar</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/domestic-flight/"
+                        target="_blank"
+                        >Domestic Flights</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/international-flight/"
+                        target="_blank"
+                        >International Flights</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/directory/train-routes.html"
+                        target="_blank"
+                        >Train Routes</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holiday-packages.html"
+                        target="_blank"
+                        >Holiday Packages</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/directory/hotels-in-india.html"
+                        target="_blank"
+                        >Hotel Directory</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/bangalore-blr-to-delhi-del/"
+                        target="_blank"
+                        >Bengaluru to New Delhi Flights</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/delhi-del-to-bangalore-blr/"
+                        target="_blank"
+                        >New Delhi to Bengaluru Flights</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/delhi-del-to-mumbai-bom/"
+                        target="_blank"
+                        >New Delhi to Mumbai Flights</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/mumbai-bom-to-delhi-del/"
+                        target="_blank"
+                        >Mumbai to New Delhi Flights</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/delhi-del-to-goa-goi/"
+                        target="_blank"
+                        >New Delhi to Goa Flights</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/mumbai-bom-to-bangalore-blr/"
+                        target="_blank"
+                        >Mumbai to Bengaluru Flights</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/delhi-del-to-bangkok-bkk/"
+                        target="_blank"
+                        >New Delhi to Bangkok Flights</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/mumbai-bom-to-dubai-dwc/"
+                        target="_blank"
+                        >Mumbai to Dubai Flights</a
+                      >
+                    </li>
+
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/delhi-del-to-dubai-dwc/"
+                        target="_blank"
+                        >New Delhi to Dubai Flights</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/dubai-dwc-to-mumbai-bom/"
+                        target="_blank"
+                        >Dubai to Mumbai Flights</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/kolkata-ccu-to-bangkok-bkk/"
+                        target="_blank"
+                        >Kolkata to Bangkok Flights</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/london-lhr-to-delhi-del/"
+                        target="_blank"
+                        >London to New Delhi Flights</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/railways/howrah-to-puri-train-tickets/"
+                        target="_blank"
+                        >Howrah to Puri Trains</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/railways/secunderabad-to-vijayawada-train-tickets/"
+                        target="_blank"
+                        >Secunderabad to Vijayawada Trains</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/railways/borivali-to-surat-train-tickets/"
+                        target="_blank"
+                        >Borivali to Surat Trains</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/railways/mumbai-cst-to-pune-train-tickets/"
+                        target="_blank"
+                        >Mumbai Cst to Pune Trains</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/railways/howrah-to-asansol-train-tickets/"
+                        target="_blank"
+                        >Howrah to Asansol Trains</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/railways/howrah-to-durgapur-train-tickets/"
+                        target="_blank"
+                        >Howrah To Durgapur Trains</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/railways/kannur-to-mangalore-train-tickets/"
+                        target="_blank"
+                        >Kanpur to Mangalore Trains</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/railways/pune-to-thane-train-tickets/"
+                        target="_blank"
+                        >Pune to Thane Trains</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/railways/jaipur-to-ajmer-train-tickets/"
+                        target="_blank"
+                        >Jaipur to Ajmer Trains</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/railways/guwahati-to-new-jalpaiguri-train-tickets/"
+                        target="_blank"
+                        >Guwahati to New Jalpaiguri Trains</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/tourism/japan/japan.html"
+                        target="_blank"
+                        >Japan Tourism</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/tourism/dubai/dubai.html"
+                        target="_blank"
+                        >Dubai Tourism</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="list-pop-dest"
+                role="tabpanel"
+                aria-labelledby="list-pop-dest-list"
+              >
+                <div class="row mt-4">
+                  <h5>A guide to explore popular destinations.</h5>
+                </div>
+                <div class="row mt-3">
+                  <ul
+                    class="d-flex flex-wrap justify-content-start align-items-center"
+                  >
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/manali-tours-packages/"
+                        target="_blank"
+                        >Manali</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/ladakh-tours-packages/"
+                        target="_blank"
+                        >Leh Ladakh</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/kashmir-tours-packages/"
+                        target="_blank"
+                        >Kashmir</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/srinagar-tours-packages/"
+                        target="_blank"
+                        >Srinagar</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/kerala-tours-packages/"
+                        target="_blank"
+                        >Kerala</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/andaman-tours-packages/"
+                        target="_blank"
+                        >Andaman</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/nainital-tours-packages/"
+                        target="_blank"
+                        >Nainital</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/mumbai-tours-packages/"
+                        >Mumbai</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/munnar-tours-packages/"
+                        >Munnar</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/agra-tours-packages/"
+                        target="_blank"
+                        >Agra</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/rishikesh-tours-packages/"
+                        target="_blank"
+                        >Rishikesh</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/dehradun-tours-packages/"
+                        target="_blank"
+                        >Dehradun</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/ranikhet-tours-packages/"
+                        target="_blank"
+                        >Ranikhet</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/orissa-tours-packages/"
+                        target="_blank"
+                        >Orissa</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/shimla-tours-packages/"
+                        target="_blank"
+                        >Shimla</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/goa-tours-packages/"
+                        target="_blank"
+                        >Goa</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/dalhousie-tours-packages/"
+                        target="_blank"
+                        >Dalhousie</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/ooty-tours-packages/"
+                        target="_blank"
+                        >Ooty</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/amritsar-tours-packages/"
+                        target="_blank"
+                        >Amritsar</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/himachal-pradesh-tours-packages/"
+                        target="_blank"
+                        >Himachal</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/darjeeling-tours-packages/"
+                        target="_blank"
+                        >Darjeeling</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/haridwar-tours-packages/"
+                        >Haridwar</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/dharamshala-tours-packages/"
+                        target="_blank"
+                        >Dharamshala</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/kovalam-tours-packages/"
+                        target="_blank"
+                        >Kovalam</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/west-bengal-tours-packages/"
+                        target="_blank"
+                        >West Bengal</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/maharashtra-tours-packages/"
+                        target="_blank"
+                        >Maharashtra</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/north-east-tours-packages/"
+                        target="_blank"
+                        >North East</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/pondicherry-tours-packages/"
+                        target="_blank"
+                        >Pondicherry</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/madhya-pradesh-tours-packages/"
+                        target="_blank"
+                        >Madhya Pradesh</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/karnataka-tours-packages/"
+                        target="_blank"
+                        >Karnataka</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/tamil-nadu-tours-packages/"
+                        target="_blank"
+                        >Tamil Naidu</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/gujarat-tours-packages/"
+                        target="_blank"
+                        >Gujarat</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/rajasthan-tours-packages/"
+                        target="_blank"
+                        >Rajasthan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/assam-tours-packages/"
+                        target="_blank"
+                        >Assam</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/sikkim-tours-packages/"
+                        target="_blank"
+                        >Sikkim</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/delhi-tours-packages/"
+                        target="_blank"
+                        >Delhi</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/jaipur-tours-packages/"
+                        target="_blank"
+                        >Jaipur</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/bangalore-tours-packages/"
+                        target="_blank"
+                        >Bangalore</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/mussoorie-tours-packages/"
+                        target="_blank"
+                        >Mussoorie</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/lansdowne-tours-packages/"
+                        target="_blank"
+                        >Lansdowne</a
+                      >
+                    </li>
+                    <!---li><a href="https://holidays.easemytrip.com/holidays/list/kannur" target="_blank">Kannur</a></li>
+                    <li><a href="https://holidays.easemytrip.com/holidays/list/chail" target="_blank">Chail</a></li-->
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="list-int-dest"
+                role="tabpanel"
+                aria-labelledby="list-int-dest-list"
+              >
+                <div class="row mt-4">
+                  <h5>A guide to connect with the world.</h5>
+                </div>
+                <div class="row mt-3">
+                  <ul
+                    class="d-flex flex-wrap justify-content-start align-items-center"
+                  >
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/mauritius-tours-packages/"
+                        target="_blank"
+                        >Mauritius</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/europe-tours-packages/"
+                        target="_blank"
+                        >Europe</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/thailand-tours-packages/"
+                        target="_blank"
+                        >Thailand</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/singapore-tours-packages/"
+                        target="_blank"
+                        >Singapore</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/dubai-tours-packages/"
+                        target="_blank"
+                        >Dubai</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/maldives-tours-packages/"
+                        target="_blank"
+                        >Maldives</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/egypt-tours-packages/"
+                        >Egypt</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/malaysia-tours-packages/"
+                        target="_blank"
+                        >Malaysia</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/australia-tours-packages/"
+                        target="_blank"
+                        >Australia</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/spain-tours-packages/"
+                        target="_blank"
+                        >Spain</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/jordan-tours-packages/"
+                        target="_blank"
+                        >Jordan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/bali-tours-packages/"
+                        target="_blank"
+                        >Bali</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/turkey-tours-packages/"
+                        target="_blank"
+                        >Turkey</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/africa-tours-packages/"
+                        target="_blank"
+                        >Africa</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/vietnam-tours-packages/"
+                        >Vietnam</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/sri-lanka-tours-packages/"
+                        target="_blank"
+                        >Srilanka</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/canada-tours-packages/"
+                        target="_blank"
+                        >Canada</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/germany-tours-packages/"
+                        target="_blank"
+                        >Germany</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/switzerland-tours-packages/"
+                        target="_blank"
+                        >Switzerland</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/holidays/japan-tours-packages/"
+                        target="_blank"
+                        >Japan</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="list-pop-air"
+                role="tabpanel"
+                aria-labelledby="list-pop-air-list"
+              >
+                <div class="row mt-4">
+                  <h5>
+                    Discover attractive deals with a wide selection of airlines.
+                  </h5>
+                </div>
+                <div class="row mt-3">
+                  <ul
+                    class="d-flex flex-wrap justify-content-start align-items-center"
+                  >
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/indigo-tickets/"
+                        target="_blank"
+                        >Indigo Airlines</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/air-india-tickets/"
+                        target="_blank"
+                        >Air India Airlines</a
+                      >
+                    </li>
+                    <!--li><a href="https://www.easemytrip.com/airline-tickets/goair.html" target="_blank">Go Air Airlines</a></li-->
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/vistara-tickets/"
+                        target="_blank"
+                        >Vistara Airlines</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/spicejet-tickets/"
+                        target="_blank"
+                        >Spicejet Airlines</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/air-asia-tickets/"
+                        target="_blank"
+                        >Air Asia Airlines</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/british-airways-tickets/"
+                        target="_blank"
+                        >British airways</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/qatar-airways-tickets/"
+                        target="_blank"
+                        >Qatar airways</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/singapore-airlines-tickets/"
+                        target="_blank"
+                        >Singapore Airlines</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/etihad-airways-tickets/"
+                        target="_blank"
+                        >Etihad airways</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/thai-airways-tickets/"
+                        target="_blank"
+                        >Thai airways</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/united-airlines-tickets/"
+                        target="_blank"
+                        >United Airlines</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/american-airlines-tickets/"
+                        target="_blank"
+                        >American Airlines</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/malaysia-airlines-tickets/"
+                        target="_blank"
+                        >Malaysia Airlines</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/akasa-air-tickets/"
+                        target="_blank"
+                        >Akasa Air</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/egypt-airways-tickets/"
+                        target="_blank"
+                        >Egypt Air</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/flights/emirates-tickets/"
+                        target="_blank"
+                        >Emirates Airlines</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="list-connect-with"
+                role="tabpanel"
+                aria-labelledby="list-connect-with-list"
+              >
+                <div class="row mt-4">
+                  <h5>Take a look at our social presence.</h5>
+                </div>
+                <div class="row mt-3">
+                  <ul
+                    class="d-flex flex-wrap justify-content-start align-items-center"
+                  >
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/contact-us.html"
+                        target="_blank"
+                        ><img
+                          class="iconsocialimg"
+                          src="./public/images/identification.svg"
+                          alt="Contact Us"
+                        />
+                        Contact Us</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.facebook.com/EaseMyTrip/"
+                        target="_blank"
+                        ><img
+                          class="iconsocialimg"
+                          src="./public/images/facebook.svg"
+                          alt="Facebook"
+                        />
+                        Facebook</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://twitter.com/easemytrip" target="_blank"
+                        ><img
+                          class="iconsocialimg"
+                          src="./public/images/twitter.svg"
+                          alt="Twitter"
+                        />
+                        Twitter</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.youtube.com/c/EaseMyTripOfficial"
+                        target="_blank"
+                        ><img
+                          class="iconsocialimg"
+                          src="./public/images/youtube.svg"
+                          alt="Youtube"
+                        />
+                        Youtube</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/company/easemytrip-com"
+                        target="_blank"
+                        ><img
+                          class="iconsocialimg"
+                          src="./public/images/linkedin.svg"
+                          alt="LinkedIn"
+                        />
+                        LinkedIn</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.instagram.com/easemytrip/"
+                        target="_blank"
+                        ><img
+                          class="iconsocialimg"
+                          src="./public/images/instagram.svg"
+                          alt="Instagram"
+                        />
+                        Instagram</a
+                      >
+                    </li>
+                    <!--li><a href="https://t.me/+cL-zeyW89So2Y2Jl" target="_blank"><img class="iconsocialimg" src="https://www.easemytrip.com/images/common/footer/icons8-telegram-app.svg"> Telegram</a></li-->
+                  </ul>
+                </div>
+                <div class="row mt-5">
+                  <div
+                    class="d-flex flex-wrap justify-content-start align-items-center"
+                  >
+                    <div>
+                      <h5>Let's keep in touch</h5>
+                      <p>
+                        Subscribe to keep up with fresh news and exciting
+                        updates. We promise not to spam you!
+                      </p>
+                    </div>
+                    <div class="content_newsletter">
+                      <form class="subscription">
+                        <input
+                          class="add-email rounded-pill p-3 m-3"
+                          type="email"
+                          placeholder="Example: test@gmail.com"
+                          id="txtsubEmail"
+                        />
+                        <button
+                          class="submit-email btn btn-primary rounded-pill p-3 m-3"
+                          type="button"
+                          onclick="subscribeNow()"
+                        >
+                          <span class="before-submit">Subscribe</span>
+                          <!-- <span class="after-submit"
+                            >Thank you for subscribing!</span
+                          > -->
+                        </button>
+                      </form>
+                      <span
+                        id="spnSubMessage"
+                        style="
+                          margin-top: 4px;
+                          position: absolute;
+                          color: red;
+                          font-size: 12px;
+                        "
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="list-offers"
+                role="tabpanel"
+                aria-labelledby="list-offers-list"
+              >
+                <div class="row mt-4">
+                  <h5>You can make your travel better with these offers.</h5>
+                </div>
+                <div class="row mt-3">
+                  <ul
+                    class="d-flex flex-wrap justify-content-start align-items-center"
+                  >
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/giftcard"
+                        target="_blank"
+                        >Gift Card</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/offers/flights.html"
+                        target="_blank"
+                        >Flights Offers</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/offers/hotels.html"
+                        target="_blank"
+                        >Hotels Offers</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/offers/bus.html"
+                        target="_blank"
+                        >Bus Offers</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/offers/cab.html"
+                        target="_blank"
+                        >Cabs Offers</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/offers/train.html"
+                        target="_blank"
+                        >Trains Offers</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/offers/hot-deals.html"
+                        target="_blank"
+                        >Hot Deals</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/deals.html"
+                        target="_blank"
+                        >Special Offers</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="list-emt"
+                role="tabpanel"
+                aria-labelledby="list-emt-list"
+              >
+                <div class="row mt-4">
+                  <h5>Discover more about us.</h5>
+                </div>
+                <div class="row mt-3">
+                  <ul
+                    class="d-flex flex-wrap justify-content-start align-items-center"
+                  >
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/about-us.html"
+                        target="_blank"
+                        >About Us</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/privacy-policy.html"
+                        target="_blank"
+                        >Privacy Policy</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/terms.html"
+                        target="_blank"
+                        >Terms &amp; Conditions</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/user-agreement.html"
+                        target="_blank"
+                        >User Agreement</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/travel-updates.html"
+                        target="_blank"
+                        >Travel Updates</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/investor-relations.html"
+                        target="_blank"
+                        >Investors Relation</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/achievements/index.html"
+                        target="_blank"
+                        >Achievements</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/offers/no-convenience-fee.html"
+                        target="_blank"
+                        >No Convenience Fee</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/offers/free-flight-cancellation.html"
+                        target="_blank"
+                        >Free Flight Cancellation</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.easemytrip.com/refer" target="_blank"
+                        >Refer &amp; Earn</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/franchise/"
+                        target="_blank"
+                        >Franchise</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/mice/index.html"
+                        target="_blank"
+                        >Mice</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.easemytrip.com/tourism.html"
+                        target="_blank"
+                        >Tourism</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="list-media"
+                role="tabpanel"
+                aria-labelledby="list-media-list"
+              >
+                <div class="row mt-4">
+                  <h5>Stay updated about us.</h5>
+                </div>
+                <div class="row mt-3">
+                  <div
+                    class="menulinkx2 d-flex justify-content-start align-items-start"
+                  >
+                    <div class="menulinkx2_cnt">
+                      <a
+                        href="https://www.easemytrip.com/media.html"
+                        target="_blank"
+                        >Press Releases</a
+                      >
+                    </div>
+                    <div class="medi_cnt_mn">
+                      <div class="medi_cnt">
+                        <div
+                          class="mail_bx d-flex justify-content-center align-items-start"
+                        >
+                          <i class="fa-regular fa-envelope"></i>
+                          <p class="mb-para">
+                            <span class="nwHdr">Media Contact</span>
+                            For Media Related queries, please drop a mail to :
+                            <br />Bhavika Sharma (Public Relations
+                            Representative) <br />
+                            <a href="mailto:bhavika.sharma@easemytrip.com"
+                              >bhavika.sharma@easemytrip.com</a
+                            >
+                            <br />
+                            <a href="mailto:media@easemytrip.com"
+                              >media@easemytrip.com</a
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+          <div class="mx-3">
+            <img class="ps-5" src="./public/images/EMTLogo_white.png" alt="" />
+            <p class="pt-2 ps-3">
+              EaseMyTrip offers 'End to End' travel solutions including air
+              tickets for more than 400 international and domestic airlines, hotel
+              bookings for nearly 1 million hotels in India and abroad, cab
+              booking with 4000+ cab operators, bus tickets with 2000+ bus
+              operators, and railway tickets in India for all major cities.
+            </p>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+          <div
+            class="logoandmtwht d-flex flex-wrap flex-column justify-content-evenly align-items-start"
+          >
+            <div class="hedingemt m-3">
+              Download EaseMyTrip App <span class="nhy"></span>
+            </div>
+
+            <div
+              class="appicon ftnew d-flex justify-content-evenly align-items-center"
+            >
+              <div class="apiconh m-2">
+                <a
+                  href="//play.google.com/store/apps/details?id=com.easemytrip.android"
+                  target="_new"
+                  ><img src="./public/images/android.png" alt="Google Play"
+                /></a>
+              </div>
+              <div class="apiconh m-2">
+                <a
+                  href="https://itunes.apple.com/in/app/easemytrip-flight-booking/id1053030595?mt=8"
+                  target="_new"
+                  ><img src="./public/images/ios.png" alt="App Store"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+          <div
+            class="logoqrmtwht d-flex flex-wrap flex-column justify-content-evenly align-items-center"
+          >
+            <div class="hedingemt m-3">
+              <!--SCAN QR CODE-->
+              SCAN QR CODE<span class="nhy"></span>
+            </div>
+            <div class="qrnewft">
+              <div class="qdrt m-3">
+                <img
+                  src="https://www.easemytrip.com/images/common/footer/ftnovqrcode.png"
+                  alt="Scan QR"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row pb-3">
+        <div
+          class="novftlast ftnew d-flex flex-wrap"
+        >
+          <div class="ndert ps-3">
+            Copyright ©
+            <script type="text/javascript">
+              document.write(new Date().getFullYear());
+            </script>
+            EaseMyTrip
+          </div>
+          <div class="ndertimhgt">
+            <img src="./public/images/logo-strip.png" alt="IATA Code" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jQuery JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap Datepicker JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+    <script>
+      // Initialize datepicker when parent div is clicked
+      $(document).ready(function () {
+        $("#datepickerParent1").click(function () {
+          $("#datepicker1")
+            .datepicker({
+              format: "dd/mm/yyyy",
+            })
+            .datepicker("show");
+        });
+      });
+
+      $(document).ready(function () {
+        $("#datepickerParent2").click(function () {
+          $("#datepicker2")
+            .datepicker({
+              format: "dd/mm/yyyy",
+            })
+            .datepicker("show");
+        });
+      });
+    </script>
+
+    <!-- Bootstrap Carousel Index JS -->
+    <script>
+      function showCarousel(index, event) {
+        // Prevent the default anchor link behavior
+        event.preventDefault();
+
+        // Remove 'active' class from all buttons
+        document.querySelectorAll("#exc-offers .btn").forEach((button) => {
+          button.classList.remove("active");
+        });
+
+        // Add 'active' class to the clicked button
+        document
+          .querySelector(`#exc-offers .btn:nth-child(${index})`)
+          .classList.add("active");
+
+        // Hide all carousels
+        document
+          .querySelectorAll("#exc-offers .carousel")
+          .forEach((carousel) => {
+            carousel.classList.remove("active-carousel");
+          });
+
+        // Show the selected carousel
+        document
+          .getElementById(`carousel${index}`)
+          .classList.add("active-carousel");
+      }
+    </script>
+
+    <!-- Open Webpage -->
+    <script>
+      function openInvestorPage() {
+        window.open(
+          "https://www.easemytrip.com/investor-relations.html",
+          "_blank"
+        );
+      }
+
+      function openCurrentPage() {
+        window.open("https://www.easemytrip.com/career.html", "_blank");
+      }
+    </script>
+  </body>
 </html>

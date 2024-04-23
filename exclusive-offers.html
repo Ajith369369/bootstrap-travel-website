@@ -22,46 +22,44 @@
         <h1 class="text-center">Exclusive Offers</h1>
       </div>
       <div class="row pb-4">
-        <div class="col-md-2"></div>
-        <div class="col-md-8 col-sm-12">
-          <div
-            class="btn-group d-flex justify-content-center align-items-center"
+        <div class="col-md-2 col-sm-0"></div>
+        <div
+          class="col-md-8 col-sm-12 d-flex flex-wrap justify-content-center align-items-center"
+        >
+          <a
+            href="#"
+            class="btn btn-primary rounded-pill mx-4 active"
+            aria-current="page"
+            onclick="showCarousel(1, event)"
+            >Best Offers</a
           >
-            <a
-              href="#"
-              class="btn btn-primary rounded-pill mx-4 active"
-              aria-current="page"
-              onclick="showCarousel(1)"
-              >Best Offers</a
-            >
-            <a
-              href="#"
-              class="btn btn-primary rounded-pill mx-4"
-              onclick="showCarousel(2)"
-              >Flight</a
-            >
-            <a
-              href="#"
-              class="btn btn-primary rounded-pill mx-4"
-              onclick="showCarousel(3)"
-              >Hotel</a
-            >
-            <a
-              href="#"
-              class="btn btn-primary rounded-pill mx-4"
-              onclick="showCarousel(4)"
-              >Bus</a
-            >
-            <!-- <a href="#" class="btn btn-primary rounded-pill mx-4">Holidays</a> -->
-            <a
-              href="#"
-              class="btn btn-primary rounded-pill mx-4"
-              onclick="showCarousel(5)"
-              >Cabs</a
-            >
-          </div>
+          <a
+            href="#"
+            class="btn btn-primary rounded-pill mx-4"
+            onclick="showCarousel(2, event)"
+            >Flight</a
+          >
+          <a
+            href="#"
+            class="btn btn-primary rounded-pill mx-4"
+            onclick="showCarousel(3, event)"
+            >Hotel</a
+          >
+          <a
+            href="#"
+            class="btn btn-primary rounded-pill mx-4"
+            onclick="showCarousel(4, event)"
+            >Bus</a
+          >
+          <!-- <a href="#" class="btn btn-primary rounded-pill mx-4">Holidays</a> -->
+          <a
+            href="#"
+            class="btn btn-primary rounded-pill mx-4"
+            onclick="showCarousel(5, event)"
+            >Cabs</a
+          >
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-2 col-sm-0"></div>
       </div>
       <div class="row px-4">
         <div id="carousel1" class="carousel active-carousel slide">
@@ -569,21 +567,28 @@
 
     <!-- Bootstrap Carousel Index JS -->
     <script>
-      function showCarousel(index) {
+      function showCarousel(index, event) {
+        // Prevent the default anchor link behavior
+        event.preventDefault();
+
         // Remove 'active' class from all buttons
-        document.querySelectorAll("#exc-offers .btn-group .btn").forEach((button) => {
-          button.classList.remove("active");
-        });
+        document
+          .querySelectorAll("#exc-offers .btn")
+          .forEach((button) => {
+            button.classList.remove("active");
+          });
 
         // Add 'active' class to the clicked button
         document
-          .querySelector(`#exc-offers .btn-group .btn:nth-child(${index})`)
+          .querySelector(`#exc-offers .btn:nth-child(${index})`)
           .classList.add("active");
 
         // Hide all carousels
-        document.querySelectorAll("#exc-offers .carousel").forEach((carousel) => {
-          carousel.classList.remove("active-carousel");
-        });
+        document
+          .querySelectorAll("#exc-offers .carousel")
+          .forEach((carousel) => {
+            carousel.classList.remove("active-carousel");
+          });
 
         // Show the selected carousel
         document
